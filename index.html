@@ -55,13 +55,13 @@
 
     <!-- NAVBAR -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-alacran-dark/80 border-b border-alacran-border/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center space-x-4 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-                <img src="logo.png" alt="Logo Alacrán INFRAMEN" class="w-26 h-26 sm:w-30 sm:h-28 object-contain drop-shadow-[0_0_10px_rgba(211,47,47,0.5)] transition-transform hover:scale-105">
-                <div>
-                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight block text-white leading-none">PORTAL ESPACIOS</span>
-                    <span class="text-xs sm:text-sm font-bold text-gold-500 tracking-widest uppercase">Alacranes INFRAMEN</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+            <!-- Logo Responsive -->
+            <div class="flex items-center space-x-2 sm:space-x-4 cursor-pointer min-w-0" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                <img src="logo.png" alt="Logo Alacrán INFRAMEN" class="w-12 h-12 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain flex-shrink-0 drop-shadow-[0_0_10px_rgba(211,47,47,0.5)] transition-transform hover:scale-105">
+                <div class="min-w-0 flex-shrink">
+                    <span class="text-base sm:text-xl md:text-2xl font-extrabold tracking-tight block text-white leading-tight truncate">PORTAL ESPACIOS</span>
+                    <span class="text-[10px] sm:text-xs md:text-sm font-bold text-gold-500 tracking-wider uppercase block truncate">Alacranes INFRAMEN</span>
                 </div>
             </div>
 
@@ -83,7 +83,7 @@
             </div>
 
             <!-- Mobile menu button -->
-            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2">
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 flex-shrink-0">
                 <i data-lucide="menu" class="w-7 h-7"></i>
             </button>
         </div>
@@ -120,7 +120,7 @@
                     </h1>
 
                     <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-normal leading-relaxed">
-                        Optimiza la reserva del Auditorio, Piscina y Multigimnasio del Instituto Nacional General Francisco Menéndez. Control de horarios en tiempo real, validación de traslapes y permisos en PDF automáticos.
+                        Optimiza la reserva del Auditorio, Piscina, Multigimnasio y Cancha 11 del Instituto Nacional General Francisco Menéndez. Control de horarios en tiempo real, validación de traslapes y permisos en PDF automáticos.
                     </p>
 
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -136,7 +136,7 @@
 
                     <div class="mt-16 pt-10 border-t border-alacran-border/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                         <div>
-                            <div class="text-3xl font-extrabold text-white">2,250+</div>
+                            <div class="text-3xl font-extrabold text-white">3,250+</div>
                             <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Capacidad Total</div>
                         </div>
                         <div>
@@ -171,7 +171,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-white mb-3">Agenda Semanal Interactiva</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
-                            Visualización matricial por horas y días. Consulta la disponibilidad del Auditorio, Piscina y Multigimnasio de manera inmediata con código de colores.
+                            Visualización matricial por horas y días. Consulta la disponibilidad del Auditorio, Piscina, Multigimnasio y Cancha 11 de manera inmediata con código de colores.
                         </p>
                     </div>
 
@@ -237,12 +237,12 @@
                         <p class="text-3xl font-extrabold text-white">Catálogo de Espacios INFRAMEN</p>
                     </div>
                     <p class="text-gray-400 text-sm max-w-md mt-2 md:mt-0">
-                        Los espacios principales están configurados con capacidades personalizadas y paletas de color para identificarlos al instante.
+                        Los espacios principales están configurados con capacidades personalizadas, precios por hora y paletas de color para identificarlos al instante.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Auditorio -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Auditorio Principal -->
                     <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-red-500/60 transition-all shadow-xl flex flex-col">
                         <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('auditorio.jpg');">
                             <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
@@ -252,26 +252,30 @@
                                 </span>
                             </div>
                             <div class="relative z-10">
-                                <h3 class="text-2xl font-bold text-white">Auditorio</h3>
-                                <p class="text-xs text-red-200">Auditorio INRAMEN primera planta</p>
+                                <h3 class="text-2xl font-bold text-white">Auditorio Principal</h3>
+                                <p class="text-xs text-red-200">Edificio Central - Nivel 2</p>
                             </div>
                         </div>
                         <div class="p-6 flex-grow flex flex-col justify-between space-y-6">
                             <div class="space-y-3 text-sm text-gray-300">
                                 <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="tag" class="w-4 h-4 text-emerald-400"></i> Precio / Hora:</span>
+                                    <span class="font-bold text-emerald-400">$25.00</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
-                                    <span class="font-bold text-white">200 Personas</span>
+                                    <span class="font-bold text-white">300 Personas</span>
                                 </div>
                                 <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-red-400"></i> Ubicación:</span>
-                                    <span class="font-medium text-gray-200">Planta Baja</span>
+                                    <span class="font-medium text-gray-200">Edificio Central - Nivel 2</span>
                                 </div>
                                 <div class="flex items-center justify-between py-2">
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
                                     <span class="font-mono text-xs px-2 py-0.5 rounded bg-red-900/50 text-red-200">B71C1C</span>
                                 </div>
                             </div>
-                            <button onclick="simularReserva('Auditorio')" class="w-full py-3 rounded-xl bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="simularReserva('Auditorio Principal')" class="w-full py-3 rounded-xl bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
                                 <i data-lucide="calendar" class="w-4 h-4"></i>
                                 <span>Solicitar este espacio</span>
                             </button>
@@ -295,6 +299,10 @@
                         <div class="p-6 flex-grow flex flex-col justify-between space-y-6">
                             <div class="space-y-3 text-sm text-gray-300">
                                 <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="tag" class="w-4 h-4 text-emerald-400"></i> Precio / Hora:</span>
+                                    <span class="font-bold text-emerald-400">$15.00</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
                                     <span class="font-bold text-white">50 Personas</span>
                                 </div>
@@ -314,7 +322,7 @@
                         </div>
                     </div>
 
-                    <!-- Multigimnasio -->
+                    <!-- Cancha Principal / Multiusos (Multigimnasio) -->
                     <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-amber-500/60 transition-all shadow-xl flex flex-col">
                         <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('multigimnasio.jpg');">
                             <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
@@ -324,26 +332,110 @@
                                 </span>
                             </div>
                             <div class="relative z-10">
-                                <h3 class="text-2xl font-bold text-white">Multigimnasio</h3>
-                                <p class="text-xs text-amber-200">Plaza de eventos múltiples</p>
+                                <h3 class="text-2xl font-bold text-white">Cancha Principal / Multiusos</h3>
+                                <p class="text-xs text-amber-200">Área Deportiva Central</p>
                             </div>
                         </div>
                         <div class="p-6 flex-grow flex flex-col justify-between space-y-6">
                             <div class="space-y-3 text-sm text-gray-300">
                                 <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="tag" class="w-4 h-4 text-emerald-400"></i> Precio / Hora:</span>
+                                    <span class="font-bold text-emerald-400">$15.00</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
-                                    <span class="font-bold text-white">2,000 Personas</span>
+                                    <span class="font-bold text-white">500 Personas</span>
                                 </div>
                                 <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i> Ubicación:</span>
-                                    <span class="font-medium text-gray-200">Complejo Deportivo</span>
+                                    <span class="font-medium text-gray-200">Área Deportiva Central</span>
                                 </div>
                                 <div class="flex items-center justify-between py-2">
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
                                     <span class="font-mono text-xs px-2 py-0.5 rounded bg-amber-900/50 text-amber-200">F58727</span>
                                 </div>
                             </div>
-                            <button onclick="simularReserva('Multigimnasio')" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-700 hover:to-amber-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="simularReserva('Cancha Principal / Multiusos')" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-700 hover:to-amber-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span>Solicitar este espacio</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cancha de Fútbol Siete / Cancha 11 -->
+                    <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-emerald-500/60 transition-all shadow-xl flex flex-col">
+                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('cancha11.png');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
+                            <div class="flex justify-end items-center relative z-10">
+                                <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-xs font-semibold rounded-full flex items-center gap-1">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> DISPONIBLE
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <h3 class="text-2xl font-bold text-white">Cancha de Fútbol Once</h3>
+                                <p class="text-xs text-emerald-200">Sector Sur</p>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-6">
+                            <div class="space-y-3 text-sm text-gray-300">
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="tag" class="w-4 h-4 text-emerald-400"></i> Precio / Hora:</span>
+                                    <span class="font-bold text-emerald-400">$12.00</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
+                                    <span class="font-bold text-white">100 Personas</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i> Ubicación:</span>
+                                    <span class="font-medium text-gray-200">Sector Sur</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
+                                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald-900/50 text-emerald-200">2E7D32</span>
+                                </div>
+                            </div>
+                            <button onclick="simularReserva('Cancha de Fútbol Siete')" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span>Solicitar este espacio</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Plaza Central / Explanada -->
+                    <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-purple-500/60 transition-all shadow-xl flex flex-col">
+                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('fondo_2.png');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
+                            <div class="flex justify-end items-center relative z-10">
+                                <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-xs font-semibold rounded-full flex items-center gap-1">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> DISPONIBLE
+                                </span>
+                            </div>
+                            <div class="relative z-10">
+                                <h3 class="text-2xl font-bold text-white">Plaza Central / Explanada</h3>
+                                <p class="text-xs text-purple-200">Zona Central</p>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between space-y-6">
+                            <div class="space-y-3 text-sm text-gray-300">
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="tag" class="w-4 h-4 text-emerald-400"></i> Precio / Hora:</span>
+                                    <span class="font-bold text-emerald-400">$20.00</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
+                                    <span class="font-bold text-white">400 Personas</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-purple-400"></i> Ubicación:</span>
+                                    <span class="font-medium text-gray-200">Zona Central</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2">
+                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
+                                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-purple-900/50 text-purple-200">7B1FA2</span>
+                                </div>
+                            </div>
+                            <button onclick="simularReserva('Plaza Central / Explanada')" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-800 to-purple-700 hover:from-purple-700 hover:to-purple-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
                                 <i data-lucide="calendar" class="w-4 h-4"></i>
                                 <span>Solicitar este espacio</span>
                             </button>
@@ -373,9 +465,12 @@
                             <div>
                                 <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Seleccionar Espacio</label>
                                 <select id="sim-espacio" class="w-full bg-alacran-dark border border-alacran-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-500 text-sm">
-                                    <option value="1">Auditorio (Cap. 200)</option>
-                                    <option value="2">Piscina (Cap. 50)</option>
-                                    <option value="3">Multigimnasio (Cap. 2000)</option>
+                                    <option value="1">Auditorio Principal (Cap. 300) - $25.00/hr</option>
+                                    <option value="2">Piscina (Cap. 50) - $15.00/hr</option>
+                                    <option value="3">Cancha Principal / Multiusos (Cap. 500) - $15.00/hr</option>
+                                    <option value="4">Cancha de Fútbol Once (Cap. 100) - $12.00/hr</option>
+                                    <option value="5">Plaza Central / Explanada (Cap. 400) - $20.00/hr</option>
+                                    
                                 </select>
                             </div>
 
@@ -397,7 +492,7 @@
 
                             <div>
                                 <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Propósito / Observación</label>
-                                <input type="text" id="sim-obs" placeholder="Ej: Acto cívico / Charla académica" value="Charla de Inducción Académica" class="w-full bg-alacran-dark border border-alacran-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-500 text-sm">
+                                <input type="text" id="sim-obs" placeholder="Ej: Acto cívico / Charla académica" value="Torneo Deportivo Intramuros" class="w-full bg-alacran-dark border border-alacran-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-500 text-sm">
                             </div>
 
                             <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-alacran-800 to-red-700 hover:from-alacran-700 hover:to-red-600 text-white font-bold rounded-xl text-sm shadow-lg shadow-red-950/50 transition-all flex items-center justify-center gap-2">
@@ -500,6 +595,7 @@
                             <li class="flex justify-between"><span>nombre_espacio</span><span class="text-gray-500">VARCHAR</span></li>
                             <li class="flex justify-between"><span>ubicacion</span><span class="text-gray-500">VARCHAR</span></li>
                             <li class="flex justify-between"><span>capacidad</span><span class="text-gray-500">INT</span></li>
+                            <li class="flex justify-between"><span>precio_hora</span><span class="text-gray-500">DECIMAL</span></li>
                             <li class="flex justify-between"><span>estado</span><span class="text-gray-500">VARCHAR</span></li>
                             <li class="flex justify-between"><span>color</span><span class="text-gray-500">HEX</span></li>
                         </ul>
@@ -599,7 +695,7 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200"></i>
                         </button>
                         <div class="hidden p-5 pt-0 text-sm text-gray-400 leading-relaxed border-t border-alacran-border/40">
-                            Para garantizar que el personal pueda limpiar y ordenar el Auditorio, Piscina o Multigimnasio, el sistema añade automáticamente un margen de 30 minutos de sanitización antes y después de cada evento programado.
+                            Para garantizar que el personal pueda limpiar y ordenar el Auditorio, Piscina, Multigimnasio o Cancha 11, el sistema añade automáticamente un margen de 30 minutos de sanitización antes y después de cada evento programado.
                         </div>
                     </div>
 
@@ -651,9 +747,9 @@
 
         // Sample initial data matching the provided database dump
         const reservasBD = [
-            { id: 1, espacioId: 1, espacioNom: "Auditorio", fecha: "2026-09-02", ini: "08:00", fin: "09:40", estado: "RECHAZADA" },
-            { id: 2, espacioId: 1, espacioNom: "Auditorio", fecha: "2026-09-02", ini: "13:00", fin: "14:35", estado: "RECHAZADA" },
-            { id: 3, espacioId: 1, espacioNom: "Auditorio", fecha: "2026-09-19", ini: "08:00", fin: "10:00", estado: "APROBADA" }
+            { id: 1, espacioId: 1, espacioNom: "Auditorio Principal", fecha: "2026-09-02", ini: "08:00", fin: "09:40", estado: "RECHAZADA" },
+            { id: 2, espacioId: 1, espacioNom: "Auditorio Principal", fecha: "2026-09-02", ini: "13:00", fin: "14:35", estado: "RECHAZADA" },
+            { id: 3, espacioId: 1, espacioNom: "Auditorio Principal", fecha: "2026-09-19", ini: "08:00", fin: "10:00", estado: "APROBADA" }
         ];
 
         // Set default date input to today
@@ -686,9 +782,12 @@
 
         function simularReserva(nombreEspacio) {
             const select = document.getElementById('sim-espacio');
-            if (nombreEspacio === 'Auditorio') select.value = "1";
+            if (nombreEspacio === 'Auditorio Principal') select.value = "1";
             if (nombreEspacio === 'Piscina') select.value = "2";
-            if (nombreEspacio === 'Multigimnasio') select.value = "3";
+            if (nombreEspacio === 'Cancha Principal / Multiusos') select.value = "3";
+            if (nombreEspacio === 'Cancha de Fútbol Siete') select.value = "4";
+            if (nombreEspacio === 'Plaza Central / Explanada') select.value = "5";
+            if (nombreEspacio === 'Aula Magna') select.value = "6";
             
             document.getElementById('demostracion').scrollIntoView({ behavior: 'smooth' });
         }
@@ -697,7 +796,8 @@
             e.preventDefault();
             
             const espacioId = parseInt(document.getElementById('sim-espacio').value);
-            const espacioNom = document.getElementById('sim-espacio').options[document.getElementById('sim-espacio').selectedIndex].text.split(' ')[0];
+            const selectElem = document.getElementById('sim-espacio');
+            const espacioNom = selectElem.options[selectElem.selectedIndex].text.replace(/\s*\(Cap\..*?\)/, '').split(' - ')[0];
             const fecha = document.getElementById('sim-fecha').value;
             const ini = document.getElementById('sim-inicio').value;
             const fin = document.getElementById('sim-fin').value;
