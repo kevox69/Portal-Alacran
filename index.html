@@ -77,9 +77,6 @@
 
             <!-- Actions -->
             <div class="hidden md:flex items-center space-x-4">
-                <button onclick="scrollToDemo()" class="px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-alacran-800 to-alacran-700 hover:from-alacran-700 hover:to-red-600 shadow-md hover:shadow-red-900/40 transition-all transform hover:-translate-y-0.5 border border-red-500/30">
-                    Probar Demo
-                </button>
             </div>
 
             <!-- Mobile menu button -->
@@ -96,9 +93,6 @@
             <a href="#beneficios" class="block py-2 text-gray-300 hover:text-white font-medium">Beneficios</a>
             <a href="#ubicacion" class="block py-2 text-gray-300 hover:text-white font-medium">Ubicación</a>
             <a href="#faq" class="block py-2 text-gray-300 hover:text-white font-medium">Preguntas Frecuentes</a>
-            <button onclick="scrollToDemo()" class="w-full mt-2 py-3 rounded-xl text-sm font-bold text-white bg-alacran-700 hover:bg-alacran-800">
-                Probar Demo
-            </button>
         </div>
     </header>
 
@@ -207,16 +201,6 @@
 
                     <div class="bg-alacran-card p-8 rounded-2xl border border-alacran-border hover:border-red-600/50 transition-all hover:shadow-lg hover:shadow-red-950/40 group">
                         <div class="w-14 h-14 bg-red-950/80 border border-red-600/30 rounded-xl flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform mb-6">
-                            <i data-lucide="database" class="w-7 h-7 text-amber-400"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Base de Datos MySQL</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Estructura optimizada con tablas relacionales (`espacio`, `reserva`, `usuario`, `reporte`) para garantizar integridad referencial y auditoría.
-                        </p>
-                    </div>
-
-                    <div class="bg-alacran-card p-8 rounded-2xl border border-alacran-border hover:border-red-600/50 transition-all hover:shadow-lg hover:shadow-red-950/40 group">
-                        <div class="w-14 h-14 bg-red-950/80 border border-red-600/30 rounded-xl flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform mb-6">
                             <i data-lucide="clock" class="w-7 h-7 text-purple-400"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-3">Filtro de Fechas Pasadas</h3>
@@ -228,7 +212,7 @@
             </div>
         </section>
 
-        <!-- ESPACIOS DISPONIBLES -->
+        <!-- ESPACIOS DISPONIBLES (CON ZOOM / MODAL INTERACTIVO) -->
         <section id="espacios" class="py-20 bg-gradient-to-b from-alacran-dark via-alacran-card/40 to-alacran-dark border-t border-alacran-border/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -237,14 +221,14 @@
                         <p class="text-3xl font-extrabold text-white">Catálogo de Espacios INFRAMEN</p>
                     </div>
                     <p class="text-gray-400 text-sm max-w-md mt-2 md:mt-0">
-                        Los espacios principales están configurados con capacidades personalizadas, precios por hora y paletas de color para identificarlos al instante.
+                        Haz clic en cualquier tarjeta para ver la imagen en grande, información detallada y especificaciones completas.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Auditorio Principal -->
-                    <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-red-500/60 transition-all shadow-xl flex flex-col">
-                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('auditorio.jpg');">
+                    <div onclick="openSpaceModal('Auditorio Principal', 'Edificio Central - Nivel 2', 'auditorio.jpg', '300 Personas', '$25.00', '#B71C1C', 'Espacio equipado con sistema de sonido profesional, proyectores multimedia y silletería cómoda, ideal para actos cívicos, conferencias y exposiciones institucionales.')" class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-red-500/60 transition-all shadow-xl flex flex-col cursor-pointer group">
+                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden group-hover:scale-105 transition-transform duration-300" style="background-image: url('auditorio.jpg');">
                             <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
                             <div class="flex justify-end items-center relative z-10">
                                 <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-xs font-semibold rounded-full flex items-center gap-1">
@@ -266,25 +250,16 @@
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
                                     <span class="font-bold text-white">300 Personas</span>
                                 </div>
-                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-red-400"></i> Ubicación:</span>
-                                    <span class="font-medium text-gray-200">Edificio Central - Nivel 2</span>
-                                </div>
-                                <div class="flex items-center justify-between py-2">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
-                                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-red-900/50 text-red-200">B71C1C</span>
-                                </div>
                             </div>
-                            <button onclick="simularReserva('Auditorio Principal')" class="w-full py-3 rounded-xl bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                <span>Solicitar este espacio</span>
-                            </button>
+                            <span class="text-xs text-gold-500 font-semibold flex items-center gap-1 justify-center group-hover:underline">
+                                <i data-lucide="zoom-in" class="w-4 h-4"></i> Ver detalles completos
+                            </span>
                         </div>
                     </div>
 
                     <!-- Piscina -->
-                    <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-cyan-500/60 transition-all shadow-xl flex flex-col">
-                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('piscina.jpg');">
+                    <div onclick="openSpaceModal('Piscina', 'Área Acuática', 'piscina.jpg', '50 Personas', '$15.00', '#27F2F5', 'Instalación acuática reglamentaria para entrenamientos de natación, clases de educación física y eventos recreativos supervisados de la comunidad estudiantil.')" class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-cyan-500/60 transition-all shadow-xl flex flex-col cursor-pointer group">
+                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden group-hover:scale-105 transition-transform duration-300" style="background-image: url('piscina.jpg');">
                             <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
                             <div class="flex justify-end items-center relative z-10">
                                 <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-xs font-semibold rounded-full flex items-center gap-1">
@@ -306,25 +281,16 @@
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
                                     <span class="font-bold text-white">50 Personas</span>
                                 </div>
-                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-cyan-400"></i> Ubicación:</span>
-                                    <span class="font-medium text-gray-200">Área Acuática</span>
-                                </div>
-                                <div class="flex items-center justify-between py-2">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
-                                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-cyan-900/50 text-cyan-200">27F2F5</span>
-                                </div>
                             </div>
-                            <button onclick="simularReserva('Piscina')" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-800 to-cyan-700 hover:from-cyan-700 hover:to-cyan-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                <span>Solicitar este espacio</span>
-                            </button>
+                            <span class="text-xs text-gold-500 font-semibold flex items-center gap-1 justify-center group-hover:underline">
+                                <i data-lucide="zoom-in" class="w-4 h-4"></i> Ver detalles completos
+                            </span>
                         </div>
                     </div>
 
                     <!-- Cancha Principal / Multiusos (Multigimnasio) -->
-                    <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-amber-500/60 transition-all shadow-xl flex flex-col">
-                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('multigimnasio.jpg');">
+                    <div onclick="openSpaceModal('Cancha Principal / Multiusos', 'Área Deportiva Central', 'multigimnasio.jpg', '500 Personas', '$15.00', '#F58727', 'Gimnasio techado multiusos adaptado para básquetbol, voleibol, asambleas generales y torneos interescolares con alta afluencia.')" class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-amber-500/60 transition-all shadow-xl flex flex-col cursor-pointer group">
+                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden group-hover:scale-105 transition-transform duration-300" style="background-image: url('multigimnasio.jpg');">
                             <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
                             <div class="flex justify-end items-center relative z-10">
                                 <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-xs font-semibold rounded-full flex items-center gap-1">
@@ -346,25 +312,16 @@
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
                                     <span class="font-bold text-white">500 Personas</span>
                                 </div>
-                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i> Ubicación:</span>
-                                    <span class="font-medium text-gray-200">Área Deportiva Central</span>
-                                </div>
-                                <div class="flex items-center justify-between py-2">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
-                                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-amber-900/50 text-amber-200">F58727</span>
-                                </div>
                             </div>
-                            <button onclick="simularReserva('Cancha Principal / Multiusos')" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-700 hover:to-amber-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                <span>Solicitar este espacio</span>
-                            </button>
+                            <span class="text-xs text-gold-500 font-semibold flex items-center gap-1 justify-center group-hover:underline">
+                                <i data-lucide="zoom-in" class="w-4 h-4"></i> Ver detalles completos
+                            </span>
                         </div>
                     </div>
 
                     <!-- Cancha de Fútbol Siete / Cancha 11 -->
-                    <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-emerald-500/60 transition-all shadow-xl flex flex-col">
-                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('cancha11.png');">
+                    <div onclick="openSpaceModal('Cancha de Fútbol Once', 'Sector Sur', 'cancha11.png', '100 Personas', '$12.00', '#2E7D32', 'Cancha de fútbol exterior con grama sintética/natural óptima para entrenamientos y partidos oficiales de ligas institucionales.')" class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-emerald-500/60 transition-all shadow-xl flex flex-col cursor-pointer group">
+                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden group-hover:scale-105 transition-transform duration-300" style="background-image: url('cancha11.png');">
                             <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
                             <div class="flex justify-end items-center relative z-10">
                                 <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-xs font-semibold rounded-full flex items-center gap-1">
@@ -386,25 +343,16 @@
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
                                     <span class="font-bold text-white">100 Personas</span>
                                 </div>
-                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i> Ubicación:</span>
-                                    <span class="font-medium text-gray-200">Sector Sur</span>
-                                </div>
-                                <div class="flex items-center justify-between py-2">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
-                                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald-900/50 text-emerald-200">2E7D32</span>
-                                </div>
                             </div>
-                            <button onclick="simularReserva('Cancha de Fútbol Siete')" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-700 hover:from-emerald-700 hover:to-emerald-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                <span>Solicitar este espacio</span>
-                            </button>
+                            <span class="text-xs text-gold-500 font-semibold flex items-center gap-1 justify-center group-hover:underline">
+                                <i data-lucide="zoom-in" class="w-4 h-4"></i> Ver detalles completos
+                            </span>
                         </div>
                     </div>
 
                     <!-- Plaza Central / Explanada -->
-                    <div class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-purple-500/60 transition-all shadow-xl flex flex-col">
-                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden" style="background-image: url('fondo_2.png');">
+                    <div onclick="openSpaceModal('Plaza Central / Explanada', 'Zona Central', 'fondo_2.png', '400 Personas', '$20.00', '#7B1FA2', 'Explanada principal al aire libre adecuada para ferias científicas, exposiciones culturales y eventos institucionales masivos.')" class="bg-alacran-card rounded-2xl overflow-hidden border border-alacran-border hover:border-purple-500/60 transition-all shadow-xl flex flex-col cursor-pointer group">
+                        <div class="h-48 bg-cover bg-center p-6 flex flex-col justify-between relative overflow-hidden group-hover:scale-105 transition-transform duration-300" style="background-image: url('fondo_2.png');">
                             <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/50 to-black/30"></div>
                             <div class="flex justify-end items-center relative z-10">
                                 <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-xs font-semibold rounded-full flex items-center gap-1">
@@ -426,19 +374,10 @@
                                     <span class="text-gray-400 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-gold-500"></i> Capacidad:</span>
                                     <span class="font-bold text-white">400 Personas</span>
                                 </div>
-                                <div class="flex items-center justify-between py-2 border-b border-alacran-border/60">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-purple-400"></i> Ubicación:</span>
-                                    <span class="font-medium text-gray-200">Zona Central</span>
-                                </div>
-                                <div class="flex items-center justify-between py-2">
-                                    <span class="text-gray-400 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4 text-purple-400"></i> Identificador:</span>
-                                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-purple-900/50 text-purple-200">7B1FA2</span>
-                                </div>
                             </div>
-                            <button onclick="simularReserva('Plaza Central / Explanada')" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-800 to-purple-700 hover:from-purple-700 hover:to-purple-600 text-white font-bold text-sm transition-colors flex items-center justify-center space-x-2">
-                                <i data-lucide="calendar" class="w-4 h-4"></i>
-                                <span>Solicitar este espacio</span>
-                            </button>
+                            <span class="text-xs text-gold-500 font-semibold flex items-center gap-1 justify-center group-hover:underline">
+                                <i data-lucide="zoom-in" class="w-4 h-4"></i> Ver detalles completos
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -470,7 +409,6 @@
                                     <option value="3">Cancha Principal / Multiusos (Cap. 500) - $15.00/hr</option>
                                     <option value="4">Cancha de Fútbol Once (Cap. 100) - $12.00/hr</option>
                                     <option value="5">Plaza Central / Explanada (Cap. 400) - $20.00/hr</option>
-                                    
                                 </select>
                             </div>
 
@@ -508,9 +446,9 @@
                         <div id="sim-alert" class="p-4 rounded-xl bg-alacran-card border border-alacran-border text-sm flex items-start gap-3">
                             <i data-lucide="info" class="w-5 h-5 text-gold-500 shrink-0 mt-0.5"></i>
                             <div>
-                                <span class="font-bold text-white block">Estado del Motor de Reserva</span>
+                                <span class="font-bold text-white block">Estado del Motor de Reserva (Sugerencias y Validaciones)</span>
                                 <p class="text-gray-300 text-xs mt-0.5" id="sim-alert-text">
-                                    Selecciona un horario y haz clic en "Validar y Enviar Solicitud" para probar las reglas de la base de datos y margen de 30 min.
+                                    💡 <strong>Sugerencia:</strong> Asegúrate de que la "Hora Fin" sea mayor a la "Hora Inicio". Si el horario choca con una reserva aprobada existente en la tabla inferior, el sistema bloqueará la solicitud automáticamente.
                                 </p>
                             </div>
                         </div>
@@ -571,77 +509,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ESTRUCTURA BASE DE DATOS Y ARQUITECTURA -->
-        <section class="py-20 bg-gradient-to-b from-alacran-dark via-alacran-card/20 to-alacran-dark border-t border-alacran-border/50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-xs font-bold text-gold-500 uppercase tracking-widest mb-2">Arquitectura del Sistema</h2>
-                    <p class="text-3xl font-extrabold text-white">Respaldo Técnico y Base de Datos</p>
-                </div>
-
-                <div class="grid lg:grid-cols-4 gap-6">
-                    <div class="bg-alacran-card p-6 rounded-2xl border border-alacran-border">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="font-bold text-white text-base">Tabla `espacio`</span>
-                            <i data-lucide="table" class="w-4 h-4 text-red-500"></i>
-                        </div>
-                        <ul class="text-xs text-gray-400 space-y-2 font-mono">
-                            <li class="flex justify-between"><span>id_espacio</span><span class="text-gray-500">INT (PK)</span></li>
-                            <li class="flex justify-between"><span>nombre_espacio</span><span class="text-gray-500">VARCHAR</span></li>
-                            <li class="flex justify-between"><span>ubicacion</span><span class="text-gray-500">VARCHAR</span></li>
-                            <li class="flex justify-between"><span>capacidad</span><span class="text-gray-500">INT</span></li>
-                            <li class="flex justify-between"><span>precio_hora</span><span class="text-gray-500">DECIMAL</span></li>
-                            <li class="flex justify-between"><span>estado</span><span class="text-gray-500">VARCHAR</span></li>
-                            <li class="flex justify-between"><span>color</span><span class="text-gray-500">HEX</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-alacran-card p-6 rounded-2xl border border-alacran-border">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="font-bold text-white text-base">Tabla `reserva`</span>
-                            <i data-lucide="table" class="w-4 h-4 text-gold-500"></i>
-                        </div>
-                        <ul class="text-xs text-gray-400 space-y-2 font-mono">
-                            <li class="flex justify-between"><span>id_reserva</span><span class="text-gray-500">INT (PK)</span></li>
-                            <li class="flex justify-between"><span>id_usuario</span><span class="text-gray-500">FK</span></li>
-                            <li class="flex justify-between"><span>id_espacio</span><span class="text-gray-500">FK</span></li>
-                            <li class="flex justify-between"><span>fecha_evento</span><span class="text-gray-500">DATE</span></li>
-                            <li class="flex justify-between"><span>hora_inicio/fin</span><span class="text-gray-500">TIME</span></li>
-                            <li class="flex justify-between"><span>estado_reserva</span><span class="text-gray-500">VARCHAR</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-alacran-card p-6 rounded-2xl border border-alacran-border">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="font-bold text-white text-base">Tabla `usuario`</span>
-                            <i data-lucide="table" class="w-4 h-4 text-sky-500"></i>
-                        </div>
-                        <ul class="text-xs text-gray-400 space-y-2 font-mono">
-                            <li class="flex justify-between"><span>id_usuario</span><span class="text-gray-500">INT (PK)</span></li>
-                            <li class="flex justify-between"><span>nombre/apellido</span><span class="text-gray-500">VARCHAR</span></li>
-                            <li class="flex justify-between"><span>correo_electronico</span><span class="text-gray-500">UNIQUE</span></li>
-                            <li class="flex justify-between"><span>rol</span><span class="text-gray-500">Admin/User</span></li>
-                            <li class="flex justify-between"><span>telefono</span><span class="text-gray-500">VARCHAR</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-alacran-card p-6 rounded-2xl border border-alacran-border">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="font-bold text-white text-base">Tabla `reporte`</span>
-                            <i data-lucide="table" class="w-4 h-4 text-purple-500"></i>
-                        </div>
-                        <ul class="text-xs text-gray-400 space-y-2 font-mono">
-                            <li class="flex justify-between"><span>id_reporte</span><span class="text-gray-500">INT (PK)</span></li>
-                            <li class="flex justify-between"><span>id_espacio</span><span class="text-gray-500">FK</span></li>
-                            <li class="flex justify-between"><span>fecha_generacion</span><span class="text-gray-500">DATETIME</span></li>
-                            <li class="flex justify-between"><span>total_horas_uso</span><span class="text-gray-500">DECIMAL</span></li>
-                            <li class="flex justify-between"><span>cantidad_eventos</span><span class="text-gray-500">INT</span></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -740,6 +607,56 @@
         </div>
     </footer>
 
+    <!-- MODAL DE DETALLE EXPANDIDO (ZOOM DE CARTAS) -->
+    <div id="space-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-alacran-card border border-alacran-border rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl relative transform transition-all animate-fade-in">
+            <!-- Botón para cerrar -->
+            <button onclick="closeSpaceModal()" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/60 text-white hover:bg-red-700 transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Imagen Grande -->
+            <div class="h-64 sm:h-72 bg-cover bg-center relative" id="modal-img">
+                <div class="absolute inset-0 bg-gradient-to-t from-alacran-card via-black/40 to-transparent"></div>
+            </div>
+
+            <!-- Contenido de Información Extendida -->
+            <div class="p-6 sm:p-8 space-y-6">
+                <div>
+                    <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/35 text-xs font-semibold rounded-full uppercase tracking-wider">Disponible</span>
+                    <h3 id="modal-title" class="text-2xl sm:text-3xl font-extrabold text-white mt-2">Nombre del Espacio</h3>
+                    <p id="modal-subtitle" class="text-xs text-gold-500 mt-1">Ubicación detallada</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 bg-alacran-dark p-4 rounded-xl border border-alacran-border/60 text-sm">
+                    <div>
+                        <span class="text-gray-400 block text-xs">Capacidad</span>
+                        <span id="modal-capacidad" class="font-bold text-white text-base">300 Personas</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block text-xs">Precio por hora</span>
+                        <span id="modal-precio" class="font-bold text-emerald-400 text-base">$25.00</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block text-xs">Identificador BD</span>
+                        <span id="modal-id" class="font-mono text-xs text-purple-300">#B71C1C</span>
+                    </div>
+                </div>
+
+                <p id="modal-desc" class="text-gray-300 text-sm leading-relaxed">
+                    Descripción detallada de la instalación.
+                </p>
+
+                <div class="flex gap-4 pt-2">
+                    <button onclick="seleccionarDesdeModal()" class="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold text-sm shadow-lg transition-all flex items-center justify-center space-x-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <span>Solicitar este espacio en el simulador</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JAVASCRIPT SIMULATOR & INTERACTIVITY -->
     <script>
         // Init Lucide Icons
@@ -755,6 +672,34 @@
         // Set default date input to today
         const todayStr = new Date().toISOString().split('T')[0];
         document.getElementById('sim-fecha').value = todayStr;
+
+        let espacioSeleccionadoActual = "";
+
+        function openSpaceModal(nombre, ubicacion, imagen, capacidad, precio, idColor, descripcion) {
+            espacioSeleccionadoActual = nombre;
+            
+            document.getElementById('modal-title').innerText = nombre;
+            document.getElementById('modal-subtitle').innerText = ubicacion;
+            document.getElementById('modal-img').style.backgroundImage = `url('${imagen}')`;
+            document.getElementById('modal-capacidad').innerText = capacidad;
+            document.getElementById('modal-precio').innerText = precio;
+            document.getElementById('modal-id').innerText = idColor;
+            document.getElementById('modal-desc').innerText = descripcion;
+
+            const modal = document.getElementById('space-modal');
+            modal.classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeSpaceModal() {
+            const modal = document.getElementById('space-modal');
+            modal.classList.add('hidden');
+        }
+
+        function seleccionarDesdeModal() {
+            closeSpaceModal();
+            simularReserva(espacioSeleccionadoActual);
+        }
 
         function renderReservasTable() {
             const tbody = document.getElementById('sim-table-body');
@@ -785,9 +730,8 @@
             if (nombreEspacio === 'Auditorio Principal') select.value = "1";
             if (nombreEspacio === 'Piscina') select.value = "2";
             if (nombreEspacio === 'Cancha Principal / Multiusos') select.value = "3";
-            if (nombreEspacio === 'Cancha de Fútbol Siete') select.value = "4";
+            if (nombreEspacio === 'Cancha de Fútbol Once') select.value = "4";
             if (nombreEspacio === 'Plaza Central / Explanada') select.value = "5";
-            if (nombreEspacio === 'Aula Magna') select.value = "6";
             
             document.getElementById('demostracion').scrollIntoView({ behavior: 'smooth' });
         }
@@ -801,7 +745,6 @@
             const fecha = document.getElementById('sim-fecha').value;
             const ini = document.getElementById('sim-inicio').value;
             const fin = document.getElementById('sim-fin').value;
-            const obs = document.getElementById('sim-obs').value;
 
             const alertBox = document.getElementById('sim-alert');
             const alertText = document.getElementById('sim-alert-text');
@@ -815,17 +758,15 @@
 
             if (fin <= ini) {
                 alertBox.className = "p-4 rounded-xl bg-red-950/80 border border-red-700 text-sm flex items-start gap-3";
-                alertText.innerHTML = "<strong class='text-red-300'>Horario inválido:</strong> La hora fin debe ser mayor a la hora de inicio.";
+                alertText.innerHTML = "<strong class='text-red-300'>Horario inválido (Sugerencia):</strong> La hora fin debe ser mayor a la hora de inicio.";
                 return;
             }
 
-            // Check for overlap and margin (30 min)
             let colision = false;
             let colisionInfo = "";
 
             reservasBD.forEach(r => {
                 if (r.espacioId === espacioId && r.fecha === fecha && r.estado === 'APROBADA') {
-                    // Check direct overlap
                     if (ini < r.fin && fin > r.ini) {
                         colision = true;
                         colisionInfo = `Existe un solapamiento con la reserva existente de ${r.ini} a ${r.fin}.`;
@@ -835,12 +776,11 @@
 
             if (colision) {
                 alertBox.className = "p-4 rounded-xl bg-amber-950/80 border border-amber-600 text-sm flex items-start gap-3";
-                alertText.innerHTML = `<strong class='text-amber-300'>Conflicto detectado:</strong> ${colisionInfo}`;
+                alertText.innerHTML = `<strong class='text-amber-300'>Conflicto detectado (Sugerencia):</strong> ${colisionInfo} Elige otro horario o espacio libre.`;
                 pdfMock.classList.add('hidden');
                 return;
             }
 
-            // Success: Add mock reservation
             const nuevaRes = {
                 id: reservasBD.length + 1,
                 espacioId,
@@ -857,7 +797,6 @@
             alertBox.className = "p-4 rounded-xl bg-emerald-950/80 border border-emerald-600 text-sm flex items-start gap-3";
             alertText.innerHTML = `<strong class='text-emerald-300'>¡Reserva Aprobada!</strong> Se ha reservado el espacio ${espacioNom} para el ${fecha} de ${ini} a ${fin}. Permiso generado a continuación.`;
 
-            // Display Mock PDF
             document.getElementById('pdf-espacio').innerText = espacioNom;
             document.getElementById('pdf-fecha').innerText = fecha;
             document.getElementById('pdf-horario').innerText = `${ini} - ${fin}`;
@@ -870,10 +809,6 @@
             
             content.classList.toggle('hidden');
             icon.classList.toggle('rotate-180');
-        }
-
-        function scrollToDemo() {
-            document.getElementById('demostracion').scrollIntoView({ behavior: 'smooth' });
         }
 
         // Mobile menu toggle
