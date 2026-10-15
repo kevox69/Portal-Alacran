@@ -51,7 +51,7 @@
         }
     </style>
 </head>
-<body class="bg-alacran-dark text-gray-100 antialiased selection:bg-alacran-700 selection:text-white min-h-screen flex flex-col">
+<body class="bg-alacran-dark text-gray-100 antialiased selection:bg-alacran-700 selection:text-white min-h-screen flex flex-col relative">
 
     <!-- NAVBAR -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-alacran-dark/80 border-b border-alacran-border/60">
@@ -70,14 +70,11 @@
                 <a href="#caracteristicas" class="hover:text-gold-500 transition-colors">Características</a>
                 <a href="#espacios" class="hover:text-gold-500 transition-colors">Espacios</a>
                 <a href="#demostracion" class="hover:text-gold-500 transition-colors">Simulador</a>
-                <a href="#beneficios" class="hover:text-gold-500 transition-colors">Beneficios</a>
+                <a href="#nosotros" class="hover:text-gold-500 transition-colors">Nosotros</a>
                 <a href="#ubicacion" class="hover:text-gold-500 transition-colors">Ubicación</a>
+                <a href="#contacto" class="hover:text-gold-500 transition-colors">Contacto</a>
                 <a href="#faq" class="hover:text-gold-500 transition-colors">FAQ</a>
             </nav>
-
-            <!-- Actions -->
-            <div class="hidden md:flex items-center space-x-4">
-            </div>
 
             <!-- Mobile menu button -->
             <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 flex-shrink-0">
@@ -90,8 +87,9 @@
             <a href="#caracteristicas" class="block py-2 text-gray-300 hover:text-white font-medium">Características</a>
             <a href="#espacios" class="block py-2 text-gray-300 hover:text-white font-medium">Espacios</a>
             <a href="#demostracion" class="block py-2 text-gray-300 hover:text-white font-medium">Simulador</a>
-            <a href="#beneficios" class="block py-2 text-gray-300 hover:text-white font-medium">Beneficios</a>
+            <a href="#nosotros" class="block py-2 text-gray-300 hover:text-white font-medium">Nosotros</a>
             <a href="#ubicacion" class="block py-2 text-gray-300 hover:text-white font-medium">Ubicación</a>
+            <a href="#contacto" class="block py-2 text-gray-300 hover:text-white font-medium">Contacto</a>
             <a href="#faq" class="block py-2 text-gray-300 hover:text-white font-medium">Preguntas Frecuentes</a>
         </div>
     </header>
@@ -126,25 +124,6 @@
                             <i data-lucide="building-2" class="w-5 h-5 text-gold-500"></i>
                             <span>Ver Instalaciones</span>
                         </a>
-                    </div>
-
-                    <div class="mt-16 pt-10 border-t border-alacran-border/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                        <div>
-                            <div class="text-3xl font-extrabold text-white">3,250+</div>
-                            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Capacidad Total</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-extrabold text-gold-500">100%</div>
-                            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Sin Traslapes</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-extrabold text-white">30 min</div>
-                            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Margen de Sanitización</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-extrabold text-emerald-400">PDF</div>
-                            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">Permisos Oficiales</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -186,26 +165,6 @@
                         <h3 class="text-xl font-bold text-white mb-3">Permisos PDF Imprimibles</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Generación automática de documentos en PDF en formato doble (Copia para Gestión Académica y Copia para el Autorizado), listos para imprimir y firmar.
-                        </p>
-                    </div>
-
-                    <div class="bg-alacran-card p-8 rounded-2xl border border-alacran-border hover:border-red-600/50 transition-all hover:shadow-lg hover:shadow-red-950/40 group">
-                        <div class="w-14 h-14 bg-red-950/80 border border-red-600/30 rounded-xl flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform mb-6">
-                            <i data-lucide="users" class="w-7 h-7 text-sky-400"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Seguridad y Roles</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Acceso diferenciado para Administradores y Docentes/Usuarios. Aprobación y rechazo centralizado de solicitudes académicas.
-                        </p>
-                    </div>
-
-                    <div class="bg-alacran-card p-8 rounded-2xl border border-alacran-border hover:border-red-600/50 transition-all hover:shadow-lg hover:shadow-red-950/40 group">
-                        <div class="w-14 h-14 bg-red-950/80 border border-red-600/30 rounded-xl flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform mb-6">
-                            <i data-lucide="clock" class="w-7 h-7 text-purple-400"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Filtro de Fechas Pasadas</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Validaciones integradas que impiden reservar en fechas extemporáneas o fuera del rango institucional (06:00 a 22:00 hrs).
                         </p>
                     </div>
                 </div>
@@ -514,6 +473,41 @@
             </div>
         </section>
 
+        <!-- SECCIÓN NOSOTROS -->
+        <section id="nosotros" class="py-20 bg-gradient-to-b from-alacran-dark via-alacran-card/30 to-alacran-dark border-t border-alacran-border/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold text-gold-500 uppercase tracking-widest mb-2">Quiénes Somos</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Sobre el Portal de Espacios Alacranes</p>
+                    <p class="text-gray-400 text-sm mt-3">
+                        Iniciativa tecnológica desarrollada para la optimización logística y académica del Instituto Nacional General Francisco Menéndez (INFRAMEN).
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-alacran-card p-8 rounded-2xl border border-alacran-border space-y-4">
+                        <div class="w-12 h-12 bg-red-950 border border-red-800 rounded-xl flex items-center justify-center text-gold-500">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Nuestra Misión</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Proveer a docentes, estudiantes y personal administrativo una plataforma digital moderna, rápida y transparente para la reservación y control de áreas comunes, auditorios y zonas deportivas, eliminando conflictos de horarios y agilizando la emisión de permisos institucionales.
+                        </p>
+                    </div>
+
+                    <div class="bg-alacran-card p-8 rounded-2xl border border-alacran-border space-y-4">
+                        <div class="w-12 h-12 bg-red-950 border border-red-800 rounded-xl flex items-center justify-center text-gold-500">
+                            <i data-lucide="eye" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Nuestra Visión</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Convertir al INFRAMEN en un referente de innovación tecnológica estudiantil en El Salvador, integrando herramientas de software robustas que fortalezcan la organización institucional y fomenten el buen uso de los recursos del centro educativo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- SECCIÓN UBICACIÓN Y MAPA (GPS) -->
         <section id="ubicacion" class="py-20 bg-alacran-dark border-t border-alacran-border/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -547,8 +541,31 @@
             </div>
         </section>
 
+        <!-- SECCIÓN CONTÁCTANOS -->
+        <section id="contacto" class="py-20 bg-gradient-to-b from-alacran-dark via-alacran-card/20 to-alacran-dark border-t border-alacran-border/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="bg-alacran-card p-10 rounded-3xl border border-red-500/30 glow-effect relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-red-600/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-500/35 text-xs font-semibold rounded-full uppercase tracking-wider">Atención Directa</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">¿Tienes dudas o necesitas asistencia?</h2>
+                    <p class="text-gray-300 text-sm max-w-xl mx-auto mt-3 leading-relaxed">
+                        Comunícate directamente con la administración del portal para resolver consultas sobre horarios especiales, eventos institucionales o soporte técnico.
+                    </p>
+
+                    <!-- Botón Enviar Mensaje -->
+                    <div class="mt-8">
+                        <a href="https://wa.me/50364378085?text=Hola%20quiero%20solicitar%20mas%20informacon%20sobre%20los%20espacios" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-xl shadow-emerald-950/60 transition-all transform hover:-translate-y-1">
+                            <img src="whatsicon.png" alt="WhatsApp" class="w-6 h-6 object-contain">
+                            <span>Enviar mensaje</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- PREGUNTAS FRECUENTES (FAQ) -->
-        <section id="faq" class="py-20 bg-gradient-to-b from-alacran-dark via-alacran-card/20 to-alacran-dark border-t border-alacran-border/50">
+        <section id="faq" class="py-20 bg-alacran-dark border-t border-alacran-border/50">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-xs font-bold text-gold-500 uppercase tracking-widest mb-2">Resuelve tus dudas</h2>
@@ -589,6 +606,11 @@
             </div>
         </section>
     </main>
+
+    <!-- whatsicon: Botón flotante de WhatsApp abajo a la derecha -->
+    <a href="https://wa.me/50364378085?text=Hola%20quiero%20solicitar%20mas%20informacon%20sobre%20los%20espacios" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-2xl shadow-emerald-950/80 flex items-center justify-center transition-all transform hover:scale-110 group" aria-label="Contactar por WhatsApp">
+        <img src="whatsicon.png" alt="WhatsApp" class="w-7 h-7 object-contain">
+    </a>
 
     <!-- FOOTER -->
     <footer class="bg-alacran-dark border-t border-alacran-border py-12">
